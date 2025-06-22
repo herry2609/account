@@ -94,3 +94,8 @@ while True:
             print("Invalid input.Amount must be a number.")
     else: print("Invalid Choice.Please select 1 or 2 only.")
 #--------------------------------------------
+# Exit/Continue Option.
+    cont = input("\nDo you want to make another transaction(Yes/No):")
+    if cont.lower() != 'yes':
+        print("Thank you for using our banking system.Goodbye!")
+        break
