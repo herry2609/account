@@ -44,3 +44,10 @@ while True:
     except ValueError as Ve:
         print("Invalid input:",Ve)
 #-----------------------------------------------------
+# Get 12 digit in account number.
+while True:
+    acc_no = input("\nEnter the 12-digit bank account number:-")
+    if acc_no.isdigit() and len(acc_no) == 12:
+        acc_no = int(acc_no)
+        break
+    else: print("Invalid account number.Please enter exactly 12 digits.")
