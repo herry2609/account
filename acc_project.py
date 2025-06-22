@@ -60,4 +60,17 @@ while True:
         break
     except ValueError:
         print("Invalid input.Please enter a numberic value.")
-
+#--------------------------------------------
+# Create account Object:
+acc1 = Account(balance,acc_no,name,password)
+#--------------------------------------------
+# password verification give attempt 3 times.
+for _ in range(3):  # allow max 3 attempt
+    entered_pass = input("\nEnter your password to proceed:")
+    if entered_pass == acc1.password:
+        break
+    else: print("Incorrect password.")
+else:
+    print("Too many incorrect attempts.Exiting..")
+    exit()
+#--------------------------------------------
