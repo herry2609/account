@@ -99,3 +99,10 @@ while True:
     if cont.lower() != 'yes':
         print("Thank you for using our banking system.Goodbye!")
         break
+#--------------------------------------------
+# Final Summary:
+print("\nAccount Summary:")
+print("Accouont holder's name:",acc1.get_name())
+print("Account Number:",acc1.account_no)
+print("Account Balance:",acc1.final_bal())
+#--------------------------------------------
