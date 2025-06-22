@@ -106,3 +106,12 @@ print("Accouont holder's name:",acc1.get_name())
 print("Account Number:",acc1.account_no)
 print("Account Balance:",acc1.final_bal())
 #--------------------------------------------
+# These data convert in txt file to summarized all the data.
+with open("acc_summary.txt","a") as f:
+    f.write("Single User session\n")
+    f.write(f"Name:{acc1.get_name()}\n")
+    f.write(f"Account Number:{acc1.account_no}\n")
+    f.write(f"Account Balance:{acc1.final_bal()}\n")
+print("\nThe session of user is saved in 'acc_summary.txt'.")
+print("Thank you session is ended..!!")
+#--------------------------------------------
