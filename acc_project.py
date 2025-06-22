@@ -2,11 +2,11 @@
 # class Name is Account.
 class Account:
     # we create a __init__ (constructor) with def function.
-    def __init__(self,bal,acc,name,pwd): # These "self" is a object reference.
+    def __init__(self,bal,acc,name,password): # These "self" is a object reference.
         self.balance = bal
         self.account_no = acc
         self.name = name
-        self.password = pwd
+        self.password = password
     # We create name of the user or accountants.
     def get_name(self): 
         return self.name
@@ -29,3 +29,18 @@ class Account:
     # We create a final balance.
     def final_bal(self):
         return self.balance
+#-----------------------------------------------------
+# Get a accountant(user) name.
+name = input("Enter the account's holder name:")
+#-----------------------------------------------------
+# Get a password by the accountant(user).
+while True:
+    try:
+        password = input("\nEnter your password(minimum 8 characters):")
+        if len(password) >= 8:
+            break
+        else: 
+            raise ValueError("Password too short.")
+    except ValueError as Ve:
+        print("Invalid input:",Ve)
+#-----------------------------------------------------
