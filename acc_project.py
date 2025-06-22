@@ -74,3 +74,23 @@ else:
     print("Too many incorrect attempts.Exiting..")
     exit()
 #--------------------------------------------
+# Choose One Transaction only:
+while True:
+    print("\nChoose Transaction Type:")
+    print("(1) Credit")
+    print("(2) Debit")
+    choice = input("Enter your choice(1/2):-")
+    if choice == '1':
+        try:
+            amount = int(input("\nEnter the amount to be Credited: Rs."))
+            acc1.credit(amount)
+        except ValueError:
+            print("Invalid input.Amount must be a number.")
+    elif choice == '2':
+        try:
+            amount = int(input("\nEnter the amount to be Debited: Rs."))
+            acc1.debit(amount)
+        except ValueError:
+            print("Invalid input.Amount must be a number.")
+    else: print("Invalid Choice.Please select 1 or 2 only.")
+#--------------------------------------------
